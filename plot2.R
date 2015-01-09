@@ -18,7 +18,7 @@ twoday_usage$Datetime <- as.POSIXct(timestamp)
 
 # Plot data as plot1.png
 
-plot(twoday_usage$Global_active_power ~ twoday_usage$Datetime, xlab="", ylab="Global Active Power (kilowatts)", type ="l")
+plot(twoday_usage$Datetime,twoday_usage$Global_active_power, xlab="", ylab="Global Active Power (kilowatts)", type ="l")
 dev.copy(png, file="plot2.png", width=480, height=480)
 dev.off()
 unlink(downloaded_file)
