@@ -1,3 +1,5 @@
+# Entire code which reconstructs plot2.png
+
 # Download and clean data
  
 fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
@@ -16,9 +18,9 @@ twoday_usage$Global_active_power <- as.numeric(as.character(twoday_usage$Global_
 timestamp <- paste(as.Date(twoday_usage$Date), twoday_usage$Time)
 twoday_usage$Datetime <- as.POSIXct(timestamp)
 
-# Plot data as plot1.png
+# Plot data as plot2.png
 
+png(filename = "plot2.png", width = 480, height = 480)
 plot(twoday_usage$Datetime,twoday_usage$Global_active_power, xlab="", ylab="Global Active Power (kilowatts)", type ="l")
-dev.copy(png, file="plot2.png", width=480, height=480)
 dev.off()
 unlink(downloaded_file)
