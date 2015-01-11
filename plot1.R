@@ -18,7 +18,7 @@ twoday_usage$Global_active_power <- as.numeric(as.character(twoday_usage$Global_
 # Plot data as plot1.png
 
 png(filename = "plot1.png", width = 480, height = 480)
-hist(twoday_usage$Global_active_power, main = paste("Global Active Power"), col="red", xlab="Global Active Power (kilowatts)")
+hist(twoday_usage$Global_active_power, main = "Global Active Power", col="red", xlab="Global Active Power (kilowatts)")
 dev.off()
 
 # Delete the downloaded file
